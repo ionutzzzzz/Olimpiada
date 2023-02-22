@@ -5,7 +5,8 @@ namespace Subiect
 	public partial class Form1 : Form
 	{
 		public static string path = Application.ExecutablePath;
-		public static string bazadedate = path + "";
+		public static string bazadedate = path + @"\FreeBook.mdf";
+		SqlConnection conn = new SqlConnection(bazadedate);
 
 		public Form1()
 		{
@@ -20,7 +21,7 @@ namespace Subiect
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
-			
+			conn.Open();
 		}
 
 		private void button1_Click(object sender, EventArgs e) // Logare
