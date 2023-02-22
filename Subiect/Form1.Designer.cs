@@ -51,7 +51,7 @@
 			this.richTextBox1.Name = "richTextBox1";
 			this.richTextBox1.Size = new System.Drawing.Size(776, 96);
 			this.richTextBox1.TabIndex = 1;
-			this.richTextBox1.Text = "";
+			this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
 			// 
 			// button1
 			// 
@@ -81,7 +81,7 @@
 			this.Controls.Add(this.richTextBox1);
 			this.Controls.Add(this.pictureBox1);
 			this.Name = "Form1";
-			this.Text = "Form1";
+			this.Text = "FreeBook Home";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);

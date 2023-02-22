@@ -5315,4 +5315,12 @@
         5WMQcRdkKOT/AOcQYzP/2Q==
 </value>
   </data>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>FreeBook este o platforma care faciliteaza imprmutul de carti.
+
+Fiecare utlizator are la dispozitie un numar de 3 carti pe care le poate imprumuta simultan
+
+Fiecare arte poate fi citita in decurs  30 de zile
+</value>
+  </data>
 </root>
