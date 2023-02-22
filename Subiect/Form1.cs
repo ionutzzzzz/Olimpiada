@@ -9,8 +9,6 @@ namespace Subiect
 		public static string bazadedate = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + root + @"FreeBook.mdf" + @";Integrated Security=True";
 		SqlConnection conn = new SqlConnection(bazadedate);
 
-		
-
 		public Form1()
 		{
 			InitializeComponent();
@@ -19,14 +17,13 @@ namespace Subiect
 
 		void Update()
 		{
+			conn.Open();
 
 		}
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
-			conn.Open();
 
-			richTextBox1.Text = bazadedate;
 		}
 
 		private void button1_Click(object sender, EventArgs e) // Logare
