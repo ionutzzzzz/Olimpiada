@@ -6,8 +6,10 @@ namespace Subiect
 	{
 		public static string path = Application.ExecutablePath;
 		public static string root = Application.StartupPath;
-		public static string bazadedate = root + @"FreeBook.mdf";
+		public static string bazadedate = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + root + @"FreeBook.mdf" + @";Integrated Security=True";
 		SqlConnection conn = new SqlConnection(bazadedate);
+
+		
 
 		public Form1()
 		{
