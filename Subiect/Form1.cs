@@ -1,3 +1,4 @@
+using System;
 using System.Data.SqlClient;
 
 namespace Subiect
@@ -12,13 +13,32 @@ namespace Subiect
 		public Form1()
 		{
 			InitializeComponent();
+			Remove();
 			Update();
 		}
 
 		void Update()
 		{
 			conn.Open();
+			SqlCommand cmd = new SqlCommand();
+			StreamReader reader = new StreamReader(root + @"\utilizatori.txt");
+			string line;
 
+			cmd.Connection = conn;
+			
+
+			while((line = reader.ReadLine()) != null)
+			{
+				cmd.CommandText = @"INSERT INTO utilizatori(email, parola, nume, prenume) VALUES(@1, @2, @3, @4)";
+				
+			}
+			conn.Close();
+		}
+
+		void Remove()
+		{
+			conn.Open();
+			conn.Close();
 		}
 
 		private void Form1_Load(object sender, EventArgs e)

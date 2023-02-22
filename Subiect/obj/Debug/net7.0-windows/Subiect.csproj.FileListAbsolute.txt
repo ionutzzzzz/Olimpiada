@@ -23,3 +23,4 @@ C:\Users\user6\Documents\GitHub\Olimpiada\Subiect\bin\Debug\net7.0-windows\runti
 C:\Users\user6\Documents\GitHub\Olimpiada\Subiect\bin\Debug\net7.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\user6\Documents\GitHub\Olimpiada\Subiect\obj\Debug\net7.0-windows\Subiect.csproj.CopyComplete
 C:\Users\user6\Documents\GitHub\Olimpiada\Subiect\obj\Debug\net7.0-windows\Subiect.Properties.Resources.resources
+C:\Users\user6\Documents\GitHub\Olimpiada\Subiect\obj\Debug\net7.0-windows\Subiect.Form2.resources
