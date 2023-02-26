@@ -106,7 +106,9 @@ namespace Subiect
 
 		private void button1_Click(object sender, EventArgs e) // Logare
 		{
-
+			Form3 f = new Form3();
+			f.Show();
+			this.Hide();
 		}
 
 		private void button2_Click(object sender, EventArgs e) // Inregistrare
