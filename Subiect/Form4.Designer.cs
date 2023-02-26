@@ -33,7 +33,10 @@
             tabPage2 = new TabPage();
             label1 = new Label();
             tabPage3 = new TabPage();
+            dataGridView1 = new DataGridView();
             tabControl1.SuspendLayout();
+            tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // tabControl1
@@ -49,6 +52,7 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(dataGridView1);
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
@@ -87,6 +91,15 @@
             tabPage3.Text = "Statistici biblioteca";
             tabPage3.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(21, 12);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(240, 150);
+            dataGridView1.TabIndex = 0;
+            // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -98,6 +111,8 @@
             Text = "MeniuFreeBook";
             Load += Form4_Load;
             tabControl1.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -109,5 +124,6 @@
         private TabPage tabPage2;
         private Label label1;
         private TabPage tabPage3;
+        private DataGridView dataGridView1;
     }
 }
