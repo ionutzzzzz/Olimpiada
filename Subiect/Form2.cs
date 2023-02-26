@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -24,14 +25,24 @@ namespace Subiect
             textBox5.PasswordChar = '*';
         }
 
+        bool Validare()
+        {
+            if (textBox1.Text == null) return false;
+            if (textBox2.Text == null) return false;
+            if (textBox3.Text == null) return false;
+            if (textBox4.Text == null) return false;
+            if (textBox5.Text == null) return false;
+            return true;
+        }
+
         private void button1_Click(object sender, EventArgs e) // Inregistrare
         {
             string password1 = textBox4.Text;
             string password2 = textBox5.Text;
 
-            if(password1 != password2) 
+            if(password1 != password2 && Validare()) 
             {
-                MessageBox.Show("Parolele nu corespund!\n" +
+                MessageBox.Show("Datele de inregistrare sunt incorecte!\n" +
                     "Te rugam sa incerci inca o data!");
             }
             else
@@ -54,16 +65,14 @@ namespace Subiect
                     cmd.Parameters.Clear();
                     conn.Close();
                     MessageBox.Show("Utilizator adaugat cu succes!");
+                    Form1 f = new Form1();
+                    f.Show();
+                    this.Hide();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.ToString());
                 }
-                
-
-                Form1 f = new Form1();
-                f.Show();
-                this.Hide();
             }
         }
     }
