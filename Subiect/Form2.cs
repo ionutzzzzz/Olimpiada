@@ -27,12 +27,12 @@ namespace Subiect
 
         bool Validare()
         {
-            if (textBox1.Text == null) return false;
-            if (textBox2.Text == null) return false;
-            if (textBox3.Text == null) return false;
-            if (textBox4.Text == null) return false;
-            if (textBox5.Text == null) return false;
-            return true;
+            if (textBox1.Text == "") return true;
+            if (textBox2.Text == "") return true;
+            if (textBox3.Text == "") return true;
+            if (textBox4.Text == "") return true;
+            if (textBox5.Text == "") return true;
+            return false;
         }
 
         private void button1_Click(object sender, EventArgs e) // Inregistrare
@@ -40,7 +40,7 @@ namespace Subiect
             string password1 = textBox4.Text;
             string password2 = textBox5.Text;
 
-            if(password1 != password2 && Validare()) 
+            if(password1 != password2 || Validare()) 
             {
                 MessageBox.Show("Datele de inregistrare sunt incorecte!\n" +
                     "Te rugam sa incerci inca o data!");
