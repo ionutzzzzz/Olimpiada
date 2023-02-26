@@ -65,7 +65,7 @@ namespace Subiect
                     cmd.Parameters.Clear();
                     conn.Close();
                     MessageBox.Show("Utilizator adaugat cu succes!");
-                    Form1 f = new Form1();
+                    Form4 f = new Form4();
                     f.Show();
                     this.Hide();
                 }

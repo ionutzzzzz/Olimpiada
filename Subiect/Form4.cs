@@ -19,7 +19,7 @@ namespace Subiect
 
         private void Form4_Load(object sender, EventArgs e)
         {
-
+            label1.Text = "Email utilizator: " + Form3.email;
         }
     }
 }
