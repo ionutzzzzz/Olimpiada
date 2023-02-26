@@ -11,51 +11,53 @@ using System.Windows.Forms;
 
 namespace Subiect
 {
-    public partial class Form3 : Form
-    {
-        public Form3()
-        {
-            InitializeComponent();
+	public partial class Form3 : Form
+	{
+		public static string email;
+
+		public Form3()
+		{
+			InitializeComponent();
+		}
+
+		private void Form3_Load(object sender, EventArgs e)
+		{
+            email = textBox1.Text;
         }
 
-        private void Form3_Load(object sender, EventArgs e)
-        {
+		private void button1_Click(object sender, EventArgs e) // Logare
+		{
+			try
+			{
+				SqlConnection conn = new SqlConnection(Form1.bazadedate);
+				conn.Open();
 
-        }
+				SqlDataAdapter sda = new SqlDataAdapter(@"Select email,parola from utilizatori where email='" + textBox1.Text + "' and parola ='" + textBox2.Text + "'", conn);
+				DataTable dt = new DataTable();
+			   
+				sda.Fill(dt);
 
-        private void button1_Click(object sender, EventArgs e) // Logare
-        {
-            try
-            {
-                SqlConnection conn = new SqlConnection(Form1.bazadedate);
-                conn.Open();
+				if(dt.Rows.Count > 0 ) 
+				{
+					this.Hide();
+					Form4 f = new Form4();
+					this.Hide();
+					f.Show();
+				}
+				else
+				{
+					MessageBox.Show("Eroare autentificare!");
+					textBox1.Text = "";
+					textBox2.Text = "";
+				}
 
-                SqlDataAdapter sda = new SqlDataAdapter(@"Select email,parola from utilizatori where email='" + textBox1.Text + "' and parola ='" + textBox2.Text + "'", conn);
-                DataTable dt = new DataTable();
-               
-                sda.Fill(dt);
+				conn.Close();
+			}
+			catch(Exception ex)
+			{
+				MessageBox.Show(ex.ToString());
+			}
 
-                if(dt.Rows.Count > 0 ) 
-                {
-                    this.Hide();
-                    Form4 f = new Form4();
-                    this.Hide();
-                    f.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Eroare autentificare!");
-                    textBox1.Text = "";
-                    textBox2.Text = "";
-                }
-
-                conn.Close();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-
-        }
-    }
+		}
+	}
 }
