@@ -50,3 +50,5 @@ C:\Users\domni\OneDrive\Documents\GitHub\Olimpiada\Subiect\obj\Debug\net7.0-wind
 C:\Users\domni\OneDrive\Documents\GitHub\Olimpiada\Subiect\obj\Debug\net7.0-windows\Subiect.pdb
 C:\Users\domni\OneDrive\Documents\GitHub\Olimpiada\Subiect\obj\Debug\net7.0-windows\Subiect.genruntimeconfig.cache
 C:\Users\domni\OneDrive\Documents\GitHub\Olimpiada\Subiect\obj\Debug\net7.0-windows\ref\Subiect.dll
+C:\Users\domni\OneDrive\Documents\GitHub\Olimpiada\Subiect\obj\Debug\net7.0-windows\Subiect.Form3.resources
+C:\Users\domni\OneDrive\Documents\GitHub\Olimpiada\Subiect\obj\Debug\net7.0-windows\Subiect.Form4.resources
