@@ -44,97 +44,104 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(61, 46);
+            label1.Location = new Point(53, 34);
             label1.Name = "label1";
-            label1.Size = new Size(46, 20);
+            label1.Size = new Size(36, 15);
             label1.TabIndex = 0;
             label1.Text = "Email";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(61, 103);
+            label2.Location = new Point(53, 77);
             label2.Name = "label2";
-            label2.Size = new Size(49, 20);
+            label2.Size = new Size(40, 15);
             label2.TabIndex = 1;
             label2.Text = "Nume";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(61, 163);
+            label3.Location = new Point(53, 122);
             label3.Name = "label3";
-            label3.Size = new Size(67, 20);
+            label3.Size = new Size(55, 15);
             label3.TabIndex = 2;
             label3.Text = "Prenume";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(61, 226);
+            label4.Location = new Point(53, 170);
             label4.Name = "label4";
-            label4.Size = new Size(50, 20);
+            label4.Size = new Size(40, 15);
             label4.TabIndex = 3;
             label4.Text = "Parola";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(61, 294);
+            label5.Location = new Point(53, 220);
             label5.Name = "label5";
-            label5.Size = new Size(142, 20);
+            label5.Size = new Size(112, 15);
             label5.TabIndex = 4;
             label5.Text = "Confirmarea parolei";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(232, 46);
+            textBox1.Location = new Point(203, 34);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(470, 27);
+            textBox1.Size = new Size(412, 23);
             textBox1.TabIndex = 5;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(232, 103);
+            textBox2.Location = new Point(203, 77);
+            textBox2.Margin = new Padding(3, 2, 3, 2);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(470, 27);
+            textBox2.Size = new Size(412, 23);
             textBox2.TabIndex = 6;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(232, 163);
+            textBox3.Location = new Point(203, 122);
+            textBox3.Margin = new Padding(3, 2, 3, 2);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(470, 27);
+            textBox3.Size = new Size(412, 23);
             textBox3.TabIndex = 7;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(232, 226);
+            textBox4.Location = new Point(203, 170);
+            textBox4.Margin = new Padding(3, 2, 3, 2);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(470, 27);
+            textBox4.Size = new Size(412, 23);
             textBox4.TabIndex = 8;
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(232, 294);
+            textBox5.Location = new Point(203, 220);
+            textBox5.Margin = new Padding(3, 2, 3, 2);
             textBox5.Name = "textBox5";
-            textBox5.Size = new Size(470, 27);
+            textBox5.Size = new Size(412, 23);
             textBox5.TabIndex = 9;
             // 
             // button1
             // 
-            button1.Location = new Point(264, 374);
+            button1.Location = new Point(231, 280);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(225, 77);
+            button1.Size = new Size(197, 58);
             button1.TabIndex = 10;
             button1.Text = "Inregistrare";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // Form2
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(753, 493);
+            ClientSize = new Size(659, 370);
             Controls.Add(button1);
             Controls.Add(textBox5);
             Controls.Add(textBox4);
@@ -146,7 +153,6 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Form2";
             Text = "CreeazaContFreeBook";
             Load += Form2_Load;

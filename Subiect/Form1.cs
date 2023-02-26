@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Subiect
 {
@@ -25,13 +26,13 @@ namespace Subiect
 			conn.Open();
 			SqlCommand cmd = new SqlCommand();
 			StreamReader utilizatori = new StreamReader(root + @"\utilizatori.txt");
-            StreamReader carti = new StreamReader(root + @"carti.txt");
-            StreamReader imprumuturi = new StreamReader(root + @"imprumuturi.txt");
-            DateTime dt = new DateTime();
-            string data;
-            string? line;
+			StreamReader carti = new StreamReader(root + @"carti.txt");
+			StreamReader imprumuturi = new StreamReader(root + @"imprumuturi.txt");
+			DateTime dt = new DateTime();
+			string data;
+			string? line;
 
-            cmd.Connection = conn;
+			cmd.Connection = conn;
 			while((line = utilizatori.ReadLine()) != null)
 			{
 				string[] siruri = line.Split('*');
@@ -42,8 +43,8 @@ namespace Subiect
 				cmd.Parameters.AddWithValue("4", siruri[3]);
 				cmd.ExecuteNonQuery();
 				cmd.Dispose();
-                cmd.Parameters.Clear();
-            }
+				cmd.Parameters.Clear();
+			}
 			while((line = carti.ReadLine()) != null)
 			{
 				string[] siruri = line.Split('*');
@@ -55,24 +56,26 @@ namespace Subiect
 				cmd.Dispose();
 				cmd.Parameters.Clear();
 			}
-			/*while((line = imprumuturi.ReadLine()) != null)
-			{
-                string[] siruri = line.Split('*');
-                data = siruri[2];
-                dt = DateTime.Parse(data, CultureInfo.InvariantCulture);
-                SqlDataAdapter sda = new SqlDataAdapter(@"Select id_carte from carti where titlu ='" + siruri[0] + "'", conn);
-                DataTable d = new DataTable();
-                sda.Fill(d);
-                DataRow dr = d.Rows[0];
 
-                cmd.CommandText = @"INSERT INTO imprumuturi(id_carte, email, data_imprumut) VALUES(@1, @2, @3)";
-                cmd.Parameters.AddWithValue("1", int.Parse(dr["id_carte"].ToString()));
-                cmd.Parameters.AddWithValue("2", siruri[1]);
-                cmd.Parameters.AddWithValue("3", dt);
+			// TODO: FIX TABLE INPUT
+			/*while ((line = imprumuturi.ReadLine()) != null)
+			{
+				string[] siruri = line.Split('*');
+				data = siruri[2].Trim();
+				dt = DateTime.Parse(data.Trim(), System.Globalization.CultureInfo.InvariantCulture);
+
+				SqlDataAdapter sda = new SqlDataAdapter(@"Select id_carte from carti where titlu ='" + siruri[0].Trim() + "'", conn);
+				DataTable d = new DataTable();
+				sda.Fill(d);
+				DataRow dr = d.Rows[0];
+				cmd = new SqlCommand(@"INSERT INTO imprumut(id_carte,email,data_imprumut) values (@1,@2,@3)", conn);
+				cmd.Parameters.AddWithValue("1", int.Parse(dr["id_carte"].ToString()));
+				cmd.Parameters.AddWithValue("2", siruri[1].Trim());
+				cmd.Parameters.AddWithValue("3", dt);
 				cmd.ExecuteNonQuery();
 				cmd.Dispose();
-				cmd.Parameters.Clear();
-            }*/
+
+			}*/
 
 			conn.Close();
 		}
