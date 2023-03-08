@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "7rr1q8FYO6D7s5vq6jMrFjG1IvmKtKHVPWpANFyur8b0ldwBfVTc2GLaFp6/d4LiRfjEqMqm8RVsB0ul5CiyVw==",
+  "dgSpecHash": "w2/+cLxwT6KIFcMU60kWTgup6KyoAExnyOyK1tM683n0qzG+eMlLyJiGZnADNMLyeBuJmQCF+GJZ2cewu9eYSQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\domni\\OneDrive\\Documents\\GitHub\\Olimpiada\\Subiect\\Subiect.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\domni\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\domni\\.nuget\\packages\\microsoft.web.webview2\\1.0.1587.40\\microsoft.web.webview2.1.0.1587.40.nupkg.sha512",
     "C:\\Users\\domni\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\domni\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\domni\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
