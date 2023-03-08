@@ -32,19 +32,19 @@
             tabPage1 = new TabPage();
             dataGridView1 = new DataGridView();
             tabPage2 = new TabPage();
-            tabPage3 = new TabPage();
-            label1 = new Label();
             dataGridView2 = new DataGridView();
+            tabPage3 = new TabPage();
             tabControl2 = new TabControl();
             tabPage4 = new TabPage();
             tabPage5 = new TabPage();
+            label1 = new Label();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             tabPage2.SuspendLayout();
-            tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            tabPage3.SuspendLayout();
             tabControl2.SuspendLayout();
             SuspendLayout();
             // 
@@ -90,6 +90,15 @@
             tabPage2.Text = "Carti imprumutate";
             tabPage2.UseVisualStyleBackColor = true;
             // 
+            // dataGridView2
+            // 
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Location = new Point(1, 0);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowTemplate.Height = 25;
+            dataGridView2.Size = new Size(907, 448);
+            dataGridView2.TabIndex = 0;
+            // 
             // tabPage3
             // 
             tabPage3.Controls.Add(tabControl2);
@@ -100,25 +109,6 @@
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Statistici biblioteca";
             tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(39, 21);
-            label1.Name = "label1";
-            label1.Size = new Size(120, 21);
-            label1.TabIndex = 1;
-            label1.Text = "Email utilizator: ";
-            // 
-            // dataGridView2
-            // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(1, 0);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowTemplate.Height = 25;
-            dataGridView2.Size = new Size(907, 448);
-            dataGridView2.TabIndex = 0;
             // 
             // tabControl2
             // 
@@ -150,6 +140,16 @@
             tabPage5.Text = "Carti Populare";
             tabPage5.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(39, 21);
+            label1.Name = "label1";
+            label1.Size = new Size(120, 21);
+            label1.TabIndex = 1;
+            label1.Text = "Email utilizator: ";
+            // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -164,8 +164,8 @@
             tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             tabPage2.ResumeLayout(false);
-            tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            tabPage3.ResumeLayout(false);
             tabControl2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();

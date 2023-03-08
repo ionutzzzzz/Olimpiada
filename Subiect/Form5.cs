@@ -24,7 +24,7 @@ namespace Subiect
 
         private void Form5_Load(object sender, EventArgs e)
         {
-            webView21.Source = new Uri(@"C:\Users\domni\OneDrive\Documents\GitHub\Olimpiada\csarp\csarp\cartipdf\1.pdf");
+            webView21.Source = new Uri(@"C:\Users\domni\OneDrive\Documents\GitHub\Olimpiada\csarp\csarp\cartipdf\2.pdf");
         }
     }
 }
