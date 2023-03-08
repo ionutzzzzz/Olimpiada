@@ -30,10 +30,10 @@
         {
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
-            tabPage2 = new TabPage();
-            label1 = new Label();
-            tabPage3 = new TabPage();
             dataGridView1 = new DataGridView();
+            tabPage2 = new TabPage();
+            tabPage3 = new TabPage();
+            label1 = new Label();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -61,6 +61,15 @@
             tabPage1.Text = "Carti disponibile";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(908, 448);
+            dataGridView1.TabIndex = 0;
+            // 
             // tabPage2
             // 
             tabPage2.Location = new Point(4, 24);
@@ -70,16 +79,6 @@
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Carti imprumutate";
             tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(39, 21);
-            label1.Name = "label1";
-            label1.Size = new Size(120, 21);
-            label1.TabIndex = 1;
-            label1.Text = "Email utilizator: ";
             // 
             // tabPage3
             // 
@@ -91,14 +90,15 @@
             tabPage3.Text = "Statistici biblioteca";
             tabPage3.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // label1
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(21, 12);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(240, 150);
-            dataGridView1.TabIndex = 0;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(39, 21);
+            label1.Name = "label1";
+            label1.Size = new Size(120, 21);
+            label1.TabIndex = 1;
+            label1.Text = "Email utilizator: ";
             // 
             // Form4
             // 
