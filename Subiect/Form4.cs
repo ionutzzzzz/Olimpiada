@@ -12,8 +12,10 @@ using System.Windows.Forms;
 
 namespace Subiect
 {
+    
     public partial class Form4 : Form
     {
+        private static bool OK;
         public Form4()
         {
             InitializeComponent();
@@ -21,6 +23,7 @@ namespace Subiect
 
         private void Form4_Load(object sender, EventArgs e)
         {
+
             label1.Text = "Email utilizator: " + Form3.email;
 
             DataTable table = new DataTable();
@@ -36,18 +39,16 @@ namespace Subiect
             SqlConnection conn = new SqlConnection(Form1.bazadedate);
             conn.Open();
 
-            SqlCommand cmd = new SqlCommand();
-            SqlDataAdapter sda = new SqlDataAdapter();
-            cmd.Connection = conn;
-            cmd.CommandText = @"SELECT * FROM imprumut";
+            SqlDataAdapter sda = new SqlDataAdapter(@"SELECT titlu,autor,gen FROM carti", conn);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            SqlDataAdapter sda2 = new SqlDataAdapter(@"SELECT * from utilizatori u JOIN imprumut i ON(u.email = i.email) JOIN carti c ON(c.id_carte = i.id_carte) where u.email='" + Form3.email + "'", conn);
+            DataTable dt1 = new DataTable();
+            sda2.Fill(dt1);
+            
 
-            SqlDataReader reader = cmd.ExecuteReader();
 
-            int id = 1;
-            while (reader.Read())
-            {
-                
-            }
+            conn.Close();
         }
     }
 }
