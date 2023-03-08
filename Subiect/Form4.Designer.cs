@@ -34,9 +34,18 @@
             tabPage2 = new TabPage();
             tabPage3 = new TabPage();
             label1 = new Label();
+            dataGridView2 = new DataGridView();
+            tabControl2 = new TabControl();
+            tabPage4 = new TabPage();
+            tabPage5 = new TabPage();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            tabPage2.SuspendLayout();
+            tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            tabControl2.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
@@ -72,6 +81,7 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(dataGridView2);
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
@@ -82,6 +92,7 @@
             // 
             // tabPage3
             // 
+            tabPage3.Controls.Add(tabControl2);
             tabPage3.Location = new Point(4, 24);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
@@ -100,6 +111,45 @@
             label1.TabIndex = 1;
             label1.Text = "Email utilizator: ";
             // 
+            // dataGridView2
+            // 
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Location = new Point(1, 0);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowTemplate.Height = 25;
+            dataGridView2.Size = new Size(907, 448);
+            dataGridView2.TabIndex = 0;
+            // 
+            // tabControl2
+            // 
+            tabControl2.Controls.Add(tabPage4);
+            tabControl2.Controls.Add(tabPage5);
+            tabControl2.Location = new Point(0, 0);
+            tabControl2.Name = "tabControl2";
+            tabControl2.SelectedIndex = 0;
+            tabControl2.Size = new Size(912, 452);
+            tabControl2.TabIndex = 0;
+            // 
+            // tabPage4
+            // 
+            tabPage4.Location = new Point(4, 24);
+            tabPage4.Name = "tabPage4";
+            tabPage4.Padding = new Padding(3);
+            tabPage4.Size = new Size(904, 424);
+            tabPage4.TabIndex = 0;
+            tabPage4.Text = "Numar Utilizatori";
+            tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            tabPage5.Location = new Point(4, 24);
+            tabPage5.Name = "tabPage5";
+            tabPage5.Padding = new Padding(3);
+            tabPage5.Size = new Size(904, 424);
+            tabPage5.TabIndex = 1;
+            tabPage5.Text = "Carti Populare";
+            tabPage5.UseVisualStyleBackColor = true;
+            // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -113,6 +163,10 @@
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            tabPage2.ResumeLayout(false);
+            tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            tabControl2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -125,5 +179,10 @@
         private Label label1;
         private TabPage tabPage3;
         private DataGridView dataGridView1;
+        private DataGridView dataGridView2;
+        private TabControl tabControl2;
+        private TabPage tabPage4;
+        private TabPage tabPage5;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
