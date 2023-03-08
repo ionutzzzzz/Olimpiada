@@ -16,5 +16,15 @@ namespace Subiect
         {
             InitializeComponent();
         }
+
+        private void webView21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form5_Load(object sender, EventArgs e)
+        {
+            webView21.Source = new Uri(@"C:\Users\domni\OneDrive\Documents\GitHub\Olimpiada\csarp\csarp\cartipdf\1.pdf");
+        }
     }
 }

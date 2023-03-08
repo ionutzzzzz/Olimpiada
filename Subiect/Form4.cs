@@ -46,7 +46,7 @@ namespace Subiect
             int id = 1;
             while (reader.Read())
             {
-
+                
             }
         }
     }

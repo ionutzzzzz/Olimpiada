@@ -52,3 +52,10 @@ C:\Users\domni\OneDrive\Documents\GitHub\Olimpiada\Subiect\obj\Debug\net7.0-wind
 C:\Users\domni\OneDrive\Documents\GitHub\Olimpiada\Subiect\obj\Debug\net7.0-windows\ref\Subiect.dll
 C:\Users\domni\OneDrive\Documents\GitHub\Olimpiada\Subiect\obj\Debug\net7.0-windows\Subiect.Form3.resources
 C:\Users\domni\OneDrive\Documents\GitHub\Olimpiada\Subiect\obj\Debug\net7.0-windows\Subiect.Form4.resources
+C:\Users\domni\OneDrive\Documents\GitHub\Olimpiada\Subiect\bin\Debug\net7.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\domni\OneDrive\Documents\GitHub\Olimpiada\Subiect\bin\Debug\net7.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\domni\OneDrive\Documents\GitHub\Olimpiada\Subiect\bin\Debug\net7.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Users\domni\OneDrive\Documents\GitHub\Olimpiada\Subiect\bin\Debug\net7.0-windows\Microsoft.Web.WebView2.Core.dll
+C:\Users\domni\OneDrive\Documents\GitHub\Olimpiada\Subiect\bin\Debug\net7.0-windows\Microsoft.Web.WebView2.WinForms.dll
+C:\Users\domni\OneDrive\Documents\GitHub\Olimpiada\Subiect\bin\Debug\net7.0-windows\Microsoft.Web.WebView2.Wpf.dll
+C:\Users\domni\OneDrive\Documents\GitHub\Olimpiada\Subiect\obj\Debug\net7.0-windows\Subiect.Form5.resources

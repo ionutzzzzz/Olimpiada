@@ -42,6 +42,7 @@
             webView21.Size = new Size(800, 450);
             webView21.TabIndex = 0;
             webView21.ZoomFactor = 1D;
+            webView21.Click += webView21_Click;
             // 
             // Form5
             // 
@@ -51,6 +52,7 @@
             Controls.Add(webView21);
             Name = "Form5";
             Text = "Form5";
+            Load += Form5_Load;
             ((System.ComponentModel.ISupportInitialize)webView21).EndInit();
             ResumeLayout(false);
         }
