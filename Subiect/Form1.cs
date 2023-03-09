@@ -58,7 +58,7 @@ namespace Subiect
 			}
 
 			// TODO: FIX TABLE INPUT
-			/*while ((line = imprumuturi.ReadLine()) != null)
+			while ((line = imprumuturi.ReadLine()) != null)
 			{
 				string[] siruri = line.Split('*');
 				data = siruri[2].Trim();
@@ -75,7 +75,7 @@ namespace Subiect
 				cmd.ExecuteNonQuery();
 				cmd.Dispose();
 
-			}*/
+			}
 
 			conn.Close();
 		}
