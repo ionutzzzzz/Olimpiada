@@ -23,10 +23,10 @@ namespace Subiect
 
         private void Form4_Load(object sender, EventArgs e)
         {
-
             label1.Text = "Email utilizator: " + Form3.email;
 
-            // CARTI
+            // TABLE 1:
+
             DataTable table = new DataTable();
             DataGridViewButtonColumn collumn = new DataGridViewButtonColumn();
 
@@ -37,8 +37,6 @@ namespace Subiect
             table.Columns.Add("Titlu", typeof(string));
             table.Columns.Add("Autor", typeof(string));
             table.Columns.Add("Gen", typeof(string));
-
-
 
             SqlConnection conn = new SqlConnection(Form1.bazadedate);
             conn.Open();
@@ -64,10 +62,23 @@ namespace Subiect
             dataGridView1.DataSource = table;
             dataGridView1.DataMember = table.TableName;
             dataGridView1.Columns.Add(collumn);
+
+            int x = collumn.Index;
+            DateTime now = DateTime.Now;
+
+            if (x != -1)
+            {
+
+            }
+
+            cmd.CommandText = @"INSERT INTO imprumut(id_carte, email, data_imprumut) VALUES (@1, @2, @3)";
+
+
             conn.Close();
 
 
-            // IMPRUMUTURI
+            // TABLE 2
+
             DataTable dt = new DataTable();
             dt.Columns.Add("Index", typeof(int));
             dt.Columns.Add("Titlu", typeof(string));
@@ -98,6 +109,11 @@ namespace Subiect
             dataGridView2.DataMember = dt.TableName;
 
             conn.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
