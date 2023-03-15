@@ -99,26 +99,51 @@ namespace Subiect
 
 			conn.Close();
 		}
-
-		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		
+		private void Update()
 		{
+
+		}
+
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+			int id = 0;
 			int x = collumn.Index;
 			SqlConnection conn = new SqlConnection(Form1.bazadedate);
 			SqlCommand cmd = new SqlCommand();
 			SqlDataAdapter sda = new SqlDataAdapter();
+			
 			DateTime now = DateTime.Now;
 
 			SqlDateTime Data = new SqlDateTime(now.Year, now.Month, now.Day);
 
+			SqlDbType currentUser = SqlDbType.NVarChar;
+
+			try
+			{
+				
+                currentUser = Form3.email;
+            }
+			catch (Exception ex) { }
+
+			
+
 			conn.Open();
 
 			cmd.Connection = conn;
-			cmd.CommandText = @"INSERT INTO imprumut(id_carte, email, data_imprumut) VALUES(@1, @2, @3)";
-			cmd.Parameters.Add("1", ); // int
-			cmd.Parameters.Add("2", ); // nchar(30)
+			cmd.CommandText = @"INSERT INTO imprumut(id_carte, email) VALUES(@1, @2)"; // , data_imprumut
+            cmd.Parameters.Add("1", (SqlDbType)id); // int
+			cmd.Parameters.Add("2", (SqlDbType.Text)Form3.email); // nchar(30)
+
+
 			// cmd.Parameters.Add("3", ); // datetime
 			cmd.Parameters.Clear();
 			cmd.ExecuteNonQuery();
+
+
+			sda.InsertCommand = cmd;
+			
 
 			if (x != -1)
 			{
@@ -126,6 +151,8 @@ namespace Subiect
 			}
 
 			conn.Close();
+
+			Update();
 		}
 	}
 }
